@@ -2,10 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+     width: 100vw;
 }
 
-html,body{
-    height: 100%;
-    width: 100%;
+// html,body{
+//      height: 100%;
+//     width: 100vw;
+// }
+
+// @mixin flex ($item) {
+//     display: flex;
+//     align-items: center;
+//     justify-content: $item;
+// }
+
+.main
+{   background-image: url(./assets/bg.jpg);
+//      background-size: cover;
+//   background-position: center;
+  height: 80vh;
+//   width: 100vw;
 }
 

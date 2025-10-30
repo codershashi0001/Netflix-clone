@@ -2,9 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100vw;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
+.main {
+  background-image: url(./assets/bg.jpg);
+  height: 80vh;
 }/*# sourceMappingURL=style.css.map */
