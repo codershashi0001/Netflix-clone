@@ -303,10 +303,10 @@ padding: 5px 10px;
 
 
 
-// .sep{
-//     background-color: rgba(128, 128, 128, 0.433);
-//     height: 7px;
-// }
+.sep{
+    background-color: rgba(128, 128, 128, 0.433);
+    height: 7px;
+}
 .curved{
   position: relative;
   height: 40px;
@@ -389,3 +389,68 @@ background-clip: padding-box;
   background: linear-gradient(ellipse to bottom, #e50914, transparent);
   z-index: 3;
 }
+
+#option{
+  // background-color: rgba(255, 255, 255, 0.263);
+  // width: 100%;
+  // font-size: large;
+  background-color: rgba(15, 15, 15, 0.434);
+border: none;
+border-color: black;
+// opacity: 0.6;
+box-sizing: border-box;
+color: white;
+line-height: 14px;
+// font-style: bolder;
+font-size: 16;
+font-weight: 400;
+padding: 5px 15px;
+}
+
+// section 2
+
+.first{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
+  margin: auto;
+  color: white;
+
+
+div{
+  display: flex;
+  flex-direction: column;
+}
+  div :first-child  {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+
+  div :nth-child(2) {
+    font-size: 1rem
+  };
+}
+
+.secImage{
+  
+  position: relative;
+
+  img{
+   
+    max-width: 30vw;
+    position: relative;
+    z-index: 10;
+   
+  }
+
+  video{
+    position: absolute;
+    max-width: 30vw;
+     top: 59;
+    right: 0;
+    
+  }
+}
+
+
