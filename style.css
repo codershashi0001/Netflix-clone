@@ -1,11 +1,274 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  width: 100vw;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: martel sans;
+  background-color: black;
+  color: white;
+}
+
+@font-face {
+  font-family: "netflix-bold";
+  src: url("./NetflixSans-Bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "netflix-regular";
+  src: url("./NetflixSans-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "netflix-medium";
+  src: url("./NetflixSans-Medium.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "netflix-light";
+  src: url("./NetflixSans-Light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .main {
   background-image: url(./assets/bg.jpg);
-  height: 80vh;
+  background-position: center center;
+  background-size: max(2500px, 100vw);
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+.main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80vw;
+  margin: auto;
+  padding-top: 25px;
+  height: 62px;
+}
+.main .box {
+  height: 100vh;
+  width: 100%;
+  opacity: 0.74;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+.main .container {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.main .container .hero {
+  height: calc(100vh - 62px);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: white;
+  position: relative;
+  gap: 23px;
+  padding: 0px 30px;
+}
+.main .container .hero span:nth-child(1) {
+  font-family: netflix-bold;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.main .container .hero span:nth-child(2) {
+  font-family: netflix-regular;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+}
+.main .container .hero span:nth-child(3) {
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.589);
+}
+.main .container .hero .last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: row1;
+  gap: 5px;
+  width: 100%;
+  position: relative;
+  /* Animation: label moves up when focused or text entered */
+}
+.main .container .hero .last .get {
+  background-color: rgba(228, 39, 39, 0.936);
+  color: white;
+  font-weight: 700;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.main .container .hero .last .get:hover {
+  background-color: #f6121d;
+}
+.main .container .hero .last input {
+  padding: 1.4rem 1.2rem;
+  font-size: rem;
+  border: 1px solid rgba(255, 255, 255, 0.314);
+  outline: none;
+  width: 60%;
+  border-width: 0.0625rem;
+  border-radius: 5px;
+  background-color: rgba(16, 15, 15, 0.712);
+  color: white;
+}
+.main .container .hero .last input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.2rem;
+}
+.main .container .hero .last input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.2rem;
+}
+.main .container .hero .last .input-box {
+  position: relative;
+  width: 300px;
+}
+.main .container .hero .last .input-box input {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  outline: none;
+}
+.main .container .hero .last .input-box label {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: transparent;
+}
+.main .container .hero .last .input-box input:not(:-moz-placeholder) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #e50914; /* Netflix red */
+  background: #000;
+  padding: 0 4px;
+}
+.main .container .hero .last .input-box input:focus + label,
+.main .container .hero .last .input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #e50914; /* Netflix red */
+  background: #000;
+  padding: 0 4px;
+}
+
+.logo {
+  max-width: 180px;
+  height: 35px;
+  position: relative;
+  z-index: 1000;
+}
+
+.button {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+.button #lang {
+  background-color: rgba(15, 15, 15, 0.434);
+  border: 2px solid white;
+  color: white;
+  line-height: 14px;
+  font-size: 16;
+  font-weight: 400;
+  padding: 5px 15px;
+}
+.button #sign {
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 14px;
+  font-size: 14;
+  padding: 5px 10px;
+}
+
+.curved {
+  position: relative;
+  height: 40px;
+  overflow: hidden;
+  border-top-left-radius: 20% 100%;
+  border-top-right-radius: 20% 100%;
+  background: radial-gradient(ellipse at top, #0a0f2c 0%, #000 70%);
+}
+
+.curved::before {
+  position: absolute;
+  z-index: 200px;
+  background: radial-gradient(ellipse at top, rgb(255, 0, 76) 40%, rgba(255, 0, 76, 0.8) 70%, rgba(255, 0, 76, 0.1) 100%);
+  height: 6px;
+  width: 100%;
+  content: " ";
+  top: -4px;
+  left: 0;
+  right: 0;
+  background-clip: padding-box;
+}
+
+.header {
+  position: relative;
+  height: 98vh;
+  background: url("./assets/hero-bg.jpg");
+  background-repeat: no-repeat;
+  clip-path: ellipse(80% 100% at 150% 85% at);
+  /* ↑ ellipse(width height at centerX centerY) */
+  overflow: hidden;
+}
+
+/* For smooth transition (optional) */
+.header::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: radial-gradient(ellipse at bottom, #000 0%, transparent 70%);
+  z-index: 2;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(ellipse to bottom, #e50914, transparent);
+  z-index: 3;
 }/*# sourceMappingURL=style.css.map */
