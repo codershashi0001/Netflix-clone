@@ -40,7 +40,7 @@ html, body {
 .main {
   background-image: url(./assets/bg.jpg);
   background-position: center center;
-  background-size: max(2500px, 100vw);
+  background-size: max(1500px, 100vw);
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
@@ -201,14 +201,16 @@ html, body {
   display: flex;
   gap: 10px;
 }
-.button #lang {
-  background-color: rgba(15, 15, 15, 0.434);
-  border: 2px solid white;
+.button .button3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 6.3rem;
   color: white;
-  line-height: 14px;
-  font-size: 16;
-  font-weight: 400;
+  background: transparent;
+  border: 0.8px solid rgba(255, 255, 255, 0.338);
   padding: 5px 15px;
+  border-radius: 2px;
 }
 .button #sign {
   background-color: red;
@@ -217,7 +219,8 @@ html, body {
   border-radius: 5px;
   line-height: 14px;
   font-size: 14;
-  padding: 5px 10px;
+  padding: 5px 15px;
+  border: none;
 }
 
 .sep {
@@ -331,7 +334,6 @@ html, body {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
-  padding-bottom: 40px;
 }
 .faq h2 {
   font-weight: 500px;
@@ -340,7 +342,7 @@ html, body {
 }
 .faq .faqbox {
   display: flex;
-  background-color: rgba(68, 67, 67, 0.467);
+  background-color: #2d2d2d;
   align-items: center;
   justify-content: space-between;
   padding: 24px;
@@ -348,6 +350,21 @@ html, body {
   font-size: 18px;
   cursor: pointer;
   transition: all 0.5s ease-in-out 0.1s;
+  overflow: hidden;
+  position: relative;
+}
+.faq .faqbox .hide {
+  position: absolute;
+  display: flex;
+  background-color: rgba(0, 255, 255, 0.579);
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  width: 70vw;
+  font-size: 18px;
+  cursor: pointer;
+  left: 0;
+  bottom: -40;
 }
 .faq .faqbox svg {
   color: white;
@@ -355,9 +372,177 @@ html, body {
   transition: 0.3s;
 }
 .faq .faqbox svg:hover {
-  color: #e50914;
+  color: #f5f2f2;
   transform: scale(1.2);
 }
 .faq .faqbox:hover {
   background-color: rgba(212, 35, 35, 0.766);
+}
+
+.hero {
+  height: 200px;
+  max-width: 90vw;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  color: white;
+  position: relative;
+  gap: 23px;
+  padding: 0px 30px;
+  margin: auto;
+}
+.hero .last {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: row1;
+  gap: 5px;
+  width: 100%;
+  position: relative;
+  /* Animation: label moves up when focused or text entered */
+}
+.hero .last input {
+  padding: 1.4rem 1.2rem;
+  font-size: rem;
+  border: 1px solid rgba(255, 255, 255, 0.314);
+  outline: none;
+  width: 100%;
+  border-width: 0.0625rem;
+  border-radius: 5px;
+  background-color: rgba(16, 15, 15, 0.712);
+  color: white;
+}
+.hero .last input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.2rem;
+}
+.hero .last input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.2rem;
+}
+.hero .last .input-box {
+  position: relative;
+  width: 40vw;
+}
+.hero .last .input-box input {
+  width: 100%;
+  padding: 1rem 0.75rem;
+  font-size: 1rem;
+  color: white;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  outline: none;
+}
+.hero .last .input-box label {
+  position: absolute;
+  left: 12px;
+  top: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: transparent;
+}
+.hero .last .input-box input:not(:-moz-placeholder) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #e50914; /* Netflix red */
+  background: #000;
+  padding: 0 4px;
+}
+.hero .last .input-box input:focus + label,
+.hero .last .input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 8px;
+  font-size: 0.75rem;
+  color: #e50914; /* Netflix red */
+  background: #000;
+  padding: 0 4px;
+}
+.hero .last .get {
+  background-color: rgba(228, 39, 39, 0.936);
+  color: white;
+  font-weight: 700;
+  border-style: solid;
+  border-width: 0.0625rem;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.hero .last .get:hover {
+  background-color: #f6121d;
+}
+.hero span {
+  font-size: 1rem;
+}
+
+footer {
+  color: white;
+  max-width: 80vw;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+footer span {
+  margin: 25px 0;
+  display: block;
+  color: rgba(255, 255, 255, 0.663);
+  font-weight: 600;
+}
+footer span a {
+  color: rgba(255, 255, 255, 0.663);
+  font-size: 1rem;
+  font-weight: 600;
+}
+footer .footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  color: white;
+}
+footer .footer .footer-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+footer .footer .footer-items a {
+  color: rgba(255, 255, 255, 0.67);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.last2 {
+  max-width: 80vw;
+  margin: auto;
+  padding-bottom: 120px;
+}
+.last2 #last {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.last2 .button2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 6.3rem;
+  color: white;
+  background: transparent;
+  border: 0.8px solid rgba(255, 255, 255, 0.338);
+  padding: 5px 15px;
+  border-radius: 2px;
+}
+.last2 .tt {
+  font-size: 0.6rem;
+  color: whitesmoke;
+}
+.last2 .tt2 {
+  color: rgba(245, 245, 245, 0.632);
 }/*# sourceMappingURL=style.css.map */
