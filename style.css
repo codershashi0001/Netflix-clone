@@ -324,6 +324,40 @@ html, body {
   top: 59;
   right: 0;
 }
-.secImage .spe {
-  width: 25vw;
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+.faq h2 {
+  font-weight: 500px;
+  font-size: 18px;
+  width: 70%;
+}
+.faq .faqbox {
+  display: flex;
+  background-color: rgba(68, 67, 67, 0.467);
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  width: 70vw;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out 0.1s;
+}
+.faq .faqbox svg {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.faq .faqbox svg:hover {
+  color: #e50914;
+  transform: scale(1.2);
+}
+.faq .faqbox:hover {
+  background-color: rgba(212, 35, 35, 0.766);
 }/*# sourceMappingURL=style.css.map */
